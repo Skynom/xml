@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.0">
+  <xs:element name="itinerary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="periode" />
+        <xs:element ref="days" maxOccurs="unbounded"/>
+        <xs:element ref="budget"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="periode">
+    <xs:complexType>
+      <xs:attribute name="end" use="required" type="xs:dateTime"/>
+      <xs:attribute name="start" use="required" type="xs:dateTime"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="days">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="day"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="budget">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:integer">
+          <xs:attribute name="devise" use="required"  type="xs:string"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="day">
+    <xs:complexType>
+      <xs:sequence >
+        <xs:element ref="steps"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="steps">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="step"/>
+        
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="step">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="POI"/>
+      </xs:sequence>
+      <xs:attribute name="end" use="required" type="xs:dateTime"/>
+      <xs:attribute name="start" use="required" type="xs:dateTime"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="POI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="rating"/>
+        <xs:element ref="position"/>
+        <xs:element ref="handicap"/>
+        <xs:element ref="contact"/>
+        <xs:element ref="description"/>
+        <xs:element ref="styles"/>
+        <xs:element ref="themes"/>
+        <xs:element ref="types"/>
+        <xs:element ref="photos"/>
+        <xs:element ref="prices"/>
+        <xs:element ref="opening"/>
+        <xs:element ref="duration"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rating" type="xs:decimal"/>
+  <xs:element name="position">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="latitude"/>
+        <xs:element ref="longitude"/>
+        <xs:element ref="address"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="latitude" type="xs:decimal"/>
+  <xs:element name="longitude" type="xs:decimal"/>
+  <xs:element name="address" type="xs:string"/>
+  <xs:element name="handicap" type="xs:boolean" default="false"/>
+  <xs:element name="contact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Telephone"/>
+        <xs:element ref="Mail"/>
+        <xs:element ref="Web"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Telephone" type="xs:string"/>
+  <xs:element name="Mail" type="xs:string"/>
+  <xs:element name="Web" type="xs:anyURI"/>
+  <xs:element name="description" type="xs:string"/>
+  <xs:element name="styles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="style"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="style" type="xs:string"/>
+  <xs:element name="themes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="theme"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="theme" type="xs:string"/>
+  <xs:element name="types">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="type"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="type" type="xs:string"/>
+  <xs:element name="photos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="photo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="photo" type="xs:anyURI"/>
+  <xs:element name="prices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="price"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="price">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="value"/>
+        <xs:element minOccurs="0" ref="conditions"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="value" type="xs:integer"/>
+  <xs:element name="conditions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="condition"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="condition" type="xs:string"/>
+  <xs:element name="opening">
+    <xs:complexType id="openingType">
+      <xs:sequence>
+        <xs:element name="periode"  >
+        <xs:complexType >
+          <xs:sequence>
+            <xs:element name="start" type="xs:date"/>
+            <xs:element name="end" type="xs:date"/>
+            <xs:element name="day" >
+              <xs:complexType >
+                <xs:sequence>
+                  <xs:element ref="name"/>
+                  <xs:element ref="timesSlot" maxOccurs="unbounded" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="duration" type="xs:integer"/>
+  <xs:element name="timesSlot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="start" minOccurs="1"/>
+        <xs:element ref="end"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="start" type="xs:time"/>
+  <xs:element name="end" type="xs:time"/>
+</xs:schema>

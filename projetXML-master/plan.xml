@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<itinerary>
+    <periode end="" start=""/>
+    <days>
+        <day id="7dbfb304-e889-47ad-b517-028f8958687d">
+            <steps>
+                <step end="" start="">
+                    <POI id="fab7e54d-5418-4be3-9a22-bdce608248d9">
+                        <name>tffyhf1</name>
+                        <rating>3</rating>
+                        <position>
+                            <latitude>132132.16</latitude>
+                            <longitude>3213</longitude>
+                            <address>20.3</address>
+                        </position>
+                        <handicap>false</handicap>
+                        <contact>
+                            <Telephone>213</Telephone>
+                            <Mail>21.3</Mail>
+                            <Web>20.3</Web>
+                        </contact>
+                        <description>2.3</description>
+                        <styles>
+                            <style>23.</style>
+                        </styles>
+                        <themes>
+                            <theme>213</theme>
+                        </themes>
+                        <types>
+                            <type>123</type>
+                        </types>
+                        <photos>
+                            <photo>213</photo>
+                        </photos>
+                        <prices>
+                            <price/>
+                        </prices>
+                    </POI>
+                </step>
+                <step end="" start="">
+                    <POI id="0c2f4acf-08fa-412f-b599-b16761bcbd3f">
+                        <name>123</name>
+                        <rating>3</rating>
+                        <position>
+                            <latitude>213</latitude>
+                            <longitude>123</longitude>
+                            <address>213</address>
+                        </position>
+                        <handicap>false</handicap>
+                        <contact>
+                            <Telephone>213</Telephone>
+                            <Mail>213</Mail>
+                            <Web>123</Web>
+                        </contact>
+                        <description>123</description>
+                        <styles>
+                            <style>213</style>
+                        </styles>
+                        <themes>
+                            <theme>123</theme>
+                        </themes>
+                        <types>
+                            <type>213</type>
+                        </types>
+                        <photos>
+                            <photo>213</photo>
+                        </photos>
+                    </POI>
+                </step>
+            </steps>
+        </day>
+    </days>
+    <days>
+        <day id="e3532d8d-2432-4af8-bb22-e5aa19bfbd1e">
+            <steps>
+                <step end="" start="">
+                    <POI id="2cdfaffa-a01b-440a-b945-25880baf3eb1">
+                        <name>123</name>
+                        <rating>2</rating>
+                        <position>
+                            <latitude>123</latitude>
+                            <longitude>213</longitude>
+                            <address>213</address>
+                        </position>
+                        <handicap>false</handicap>
+                        <contact>
+                            <Telephone>213</Telephone>
+                            <Mail>213</Mail>
+                            <Web>213</Web>
+                        </contact>
+                        <description>213</description>
+                        <styles>
+                            <style>213</style>
+                        </styles>
+                        <themes>
+                            <theme>123</theme>
+                        </themes>
+                        <types>
+                            <type>213</type>
+                        </types>
+                        <photos>
+                            <photo>213</photo>
+                        </photos>
+                    </POI>
+                </step>
+            </steps>
+        </day>
+    </days>
+    <budget devise="Euro">0</budget>
+</itinerary>

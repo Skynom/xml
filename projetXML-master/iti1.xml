@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<itinerary>
+    <periode end="2012-12-13T12:12:12" start="2012-12-13T12:12:12" />
+    <days>
+        <day id="str1234">
+            <steps>
+                <step end="2012-12-13T12:12:12" start="2012-12-13T12:12:12">
+                    <POI id="str1234">
+                        <name>str1234</name>
+                        <rating>123.45</rating>
+                        <position>
+                            <latitude>123.45</latitude>
+                            <longitude>123.45</longitude>
+                            <address>str1234</address>
+                        </position>
+                        <handicap>true</handicap>
+                        <contact>
+                            <Telephone>str1234</Telephone>
+                            <Mail>str1234</Mail>
+                            <Web>http://www.xsd2xml.com</Web>
+                        </contact>
+                        <description>str1234</description>
+                        <styles>
+                            <style>str1234</style>
+                        </styles>
+                        <themes>
+                            <theme>str1234</theme>
+                        </themes>
+                        <types>
+                            <type>str1234</type>
+                        </types>
+                        <photos>
+                            <photo>http://www.xsd2xml.com</photo>
+                        </photos>
+                        <prices>
+                            <price>
+                                <value>1234</value>
+                                <conditions>
+                                    <condition>str1234</condition>
+                                </conditions>
+                            </price>
+                        </prices>
+                        <opening>
+                            <periode>
+                                <start>2012-12-13</start>
+                                <end>2012-12-13</end>
+                                <day>
+                                    <name>str1234</name>
+                                    <timesSlot>
+                                        <start>12:12:12</start>
+                                        <end>12:12:12</end>
+                                    </timesSlot>
+                                </day>
+                            </periode>
+                        </opening>
+                        <duration>1234</duration>
+                    </POI>
+                </step>
+            </steps>
+        </day>
+    </days>
+    <budget devise="str1234">1234</budget>
+</itinerary>
